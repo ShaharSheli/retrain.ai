@@ -7,7 +7,7 @@ ML Pipeline steps:
 2. Model training - load the transformed data and fit the model
 3. Model testing - load test data and test the fitted model on it
 
-Project architecture:
+## Project architecture:
 
 base_docker.dockerfile - base image that included the correct python version, requirements installed and data copied
 
@@ -23,7 +23,7 @@ test folder:
 - test_model.dockerfile - based on the base_docker, this docker includes the python codes that transfrom the test data and 
 - test.py - python code to load,transfrom and test the model
 
-Implementation:
+## Implementation:
 In my current job we using Tekton to create, monitor and run pipelines.
 Tekton suggest a catalog of ready-to-use images of step in order to implement simple tasks.
 In this task I would use the dockerfiles to create my own steps and connect them to full pipeline with conditional step that will continue only if the previous step ended successfully.
