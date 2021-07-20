@@ -12,15 +12,15 @@ ML Pipeline steps:
 base_docker.dockerfile - base image that included the correct python version, requirements installed and data copied
 
 data folder:
-- data_docker.dockerfile - based on the base_docker, this docker includes the python codes that check the data and transfrom it to be ready for the model
+- Dockerfile - based on the base_docker, this docker includes the python codes that check the data and transfrom it to be ready for the model
 - data.py - python code to check and transfrom it
 
 training folder:
-- model_training.dockerfile - based on the base_docker, this docker includes the python codes that load the dill of the transfromed data and train the model
+- Dockerfile - based on the base_docker, this docker includes the python codes that load the dill of the transfromed data and train the model
 - train.py - python code to load the transformed data and fit the model
 
 test folder:
-- test_model.dockerfile - based on the base_docker, this docker includes the python codes that transfrom the test data and 
+- Dockerfile - based on the base_docker, this docker includes the python codes that transfrom the test data and 
 - test.py - python code to load,transfrom and test the model
 
 ## Implementation:
