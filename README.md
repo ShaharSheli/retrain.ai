@@ -22,3 +22,9 @@ training folder:
 test folder:
 - test_model.dockerfile - based on the base_docker, this docker includes the python codes that transfrom the test data and 
 - test.py - python code to load,transfrom and test the model
+
+Implementation:
+In my current job we using Tekton to create, monitor and run pipelines.
+Tekton suggest a catalog of ready-to-use images of step in order to implement simple tasks.
+In this task I would use the dockerfiles to create my own steps and connect them to full pipeline with conditional step that will continue only if the previous step ended successfully.
+Additionally I can use parameters in Tekton to allow to choose different the dataset and algorithms to reuse the pipeline at scale or run several trains or test in parallel.
